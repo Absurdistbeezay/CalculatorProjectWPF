@@ -20,9 +20,227 @@ namespace CalculatorProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        float num1 = 0f;
+        float num2 = 0f;
+        string operation = "";
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        //NUMBER BUTTONS
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 1;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 1;
+                display.Text = num2.ToString();
+            }
+
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 2;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 3;
+                display.Text = num2.ToString();
+            }
+
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 3;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 3;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 4;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 4;
+                display.Text = num2.ToString();
+            }
+
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 5;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 5;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn6_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 6;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 6;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 7;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 7;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn8_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 8;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 8;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn9_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 9;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 9;
+                display.Text = num2.ToString();
+            }
+        }
+
+        private void btn0_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 * 10) + 0;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 * 10) + 0;
+                display.Text = num2.ToString();
+            }
+        }
+
+        //TODO
+        private void btnDecimal_Click(object sender, RoutedEventArgs e)
+        {
+            display.Text = ".";
+        }
+
+        //OPERATION BUTTONS
+
+        private void btnPlus_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "+";
+            
+        }
+
+        private void btnSubtract_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "-";
+        }
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "*";
+        }
+
+        private void btnDivide_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "/";
+        }
+
+
+        //EQUAL BUTTON
+        private void btnEqual_Click(object sender, RoutedEventArgs e)
+        {
+            switch (operation) {
+                case "+":
+                display.Text = (num1 + num2).ToString();
+                    break;
+                case "-":
+                    display.Text = (num1 - num2).ToString();
+                    break;
+                case "*":
+                    display.Text = (num1 * num2).ToString();
+                    break;
+                case "/":
+                    display.Text = (num1 / num2).ToString();
+                    break;
+            }
+        }
+
+        //CLEAR BUTTON
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            display.Text = "0";        
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                num1 = (num1 / 10) + 1;
+                display.Text = num1.ToString();
+            }
+            else
+            {
+                num2 = (num2 / 10) + 1;
+                display.Text = num2.ToString();
+            }
+        }
+
     }
 }
