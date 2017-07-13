@@ -72,7 +72,7 @@ namespace CalculatorProject
                 num2 = (num2 * 10) + 3;
                 display.Text = num2.ToString();
             }
-        }
+        }           
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
